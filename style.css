@@ -1,0 +1,187 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.forms-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.signup-signin{
+    width: 350px;
+    box-shadow: 1px 1px 10px 5px #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+.signup-signin h2{
+    margin-left: 20px;
+    color: #0AB1FF;
+}
+.signup{
+    display: none;
+}
+.form-control-btn{
+    border: 1px solid #0AB1FF;
+    border-radius: 15px;
+    width: 200px;
+    margin: auto;
+}
+.form-control-btn button{
+    display: inline-block;
+    font-size: 16px;
+    background: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 85px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease;
+}
+.form-control-btn button.active{
+    display: inline-block;
+    font-size: 16px;
+    background: #0AB1FF;
+    border: none;
+    padding: 5px 15px;
+    color: #fff;
+    width: 110px;
+}
+.input-group{
+    border: 1px solid #0AB1FF;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+}
+.input-group i{
+    background-color: #0AB1FF;
+    padding:  10px 15px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #0AB1FF;
+    width: 15px;
+    height: 100%;
+    color: #fff;
+}
+.input-group input{
+    border: none;
+    padding: 10px 10px 10px 0;
+    text-align: center;
+    width: calc(100% - 50px);
+    border-radius: 0 20px 20px 0;
+    font-size: 16px;
+    outline: none;
+}
+.term-condition{
+    margin: 15px 10px;
+}
+.term-condition input[type=checkbox]{
+    background: #0AB1FF;
+    margin: 0 5px 0 15px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+
+}
+.term-condition input[type=checkbox]::before{
+    font-family: FontAwesome;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0AB1FF;
+    text-align: center;
+    position: absolute;
+}
+.term-condition input[type=checkbox]:checked::after{
+    font-family: FontAwesome;
+    content: "\f00c";
+    background: #0AB1FF;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0AB1FF;
+    text-align: center;
+    position: absolute;
+}
+.signin-form input[type=submit],.signup-form input[type=submit]{
+    border: none;
+    padding: 10px 35px;
+    font-size: 16px;
+    background: #0AB1FF;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin: auto;
+    display: block;
+    width: 50%;
+    border: 2px solid #0AB1FF;
+    outline: none;
+    margin-top: 20px;
+}
+.signin-form input[type=submit]:hover,.signup-form input[type=submit]:hover{
+    background: #fff;
+    color: #0AB1FF;
+    cursor: pointer;
+}
+hr{
+    margin: 20px 0 0 0;
+    border-top: 1px solid #ddd;
+}
+.theme-changer{
+    display: flex;
+    align-items: center;
+}
+.theme-changer .theme-title{
+    margin: 10px;
+    display: inline-block;
+}
+.theme-changer ul{
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+.theme-changer ul li{
+    display: inline-block;
+}
+.theme{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.theme.bg-sky-blue{
+    background: #0AB1FF;
+}
+.theme.bg-orange{
+    background: orange;
+}
+.theme.bg-red{
+    background: red;
+}
+.theme.bg-green{
+    background: green;
+}
+.theme.bg-dark{
+    background: #222;
+}
+.theme.active{
+    content: "";
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    border: 3px solid #0AB1FF;
+}
+.theme.active::after{
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #0AB1FF;
+}

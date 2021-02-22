@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In System in PHP, MYSQL & AJAX</title>
+    <script src="https://kit.fontawesome.com/336be35538.js" crossorigin="anonymous"></script>
+    <style></style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkTheme()">
+    <main class="forms-container">
+        <div class="signup-signin">
+            <div class="form-control-btn">
+                <button class="btn active" id="signin-btn" onclick="formViewer('signin','signup')">Sign In</button>
+                <button class="btn" id="signup-btn" onclick="formViewer('signup','signin')">Sign Up</button>
+            </div>
+            <div class="signup">
+                <h2><i class="fas fa-user-plus"></i> Sign Up</h2>
+                <form action="" class="signup-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" id="signup-name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="email" id="signup-email" placeholder="abc@example.xyz">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="text" name="mobile" id="signup-mobile" placeholder="01xxx xxxxxx">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user-lock"></i>
+                        <input type="password" name="password" id="signup-password" placeholder="Enter Your Password">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user-lock"></i>
+                        <input type="password" name="conf-password" id="signup-conf-password" placeholder="Enter Password Agian">
+                    </div>
+                    <div class="term-condition">
+                        <input type="checkbox" name="accept-term" id="accept-term"> 
+                        <label for="accept-term">I accept all the term & conditions.</label> 
+                    </div>
+                    <input type="submit" value="Sign Up" name="signup" id="signup">
+                </form>
+            </div>
+            <div class="signin">
+                <h2><i class="fas fa-sign-in-alt"></i> Sign In</h2>
+                <form action="" class="signin-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="email" id="email" placeholder="abc@example.xyz">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                    </div>
+                    <input type="submit" value="Sign In" name="signin" id="signin">
+                </form>
+            </div>
+            <hr>
+            <div class="theme-changer">
+                <span class="theme-title">Change your theme: </span>
+                <ul>
+                    <li class="theme sky-blue active" onclick="themeHandler('sky-blue')"></li>
+                    <li class="theme orange bg-orange" onclick="themeHandler('orange')"></li>
+                    <li class="theme red bg-red" onclick="themeHandler('red')"></li>
+                    <li class="theme green bg-green" onclick="themeHandler('green')"></li>
+                    <li class="theme dark bg-dark" onclick="themeHandler('dark')"></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
